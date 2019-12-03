@@ -4,7 +4,7 @@ import ReservationForm from './reservationForm.jsx';
 class App extends React.Component {
     render() {
       return (
-        <div>
+        <div className="appComponent">
           <ReservationForm />
         </div>
       );

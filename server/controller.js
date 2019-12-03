@@ -1,18 +1,21 @@
-// const Models= require('../database/model.js');
+// const faker = require('faker');
+// const moment = require('moment');
+// const db = require('./index.js');
 
-// module.exports= {
-
-// getReservations :(id,(req, res) => {
-//     Models.getReservations((err,result) =>{
-//         res.send("success");
+// (function () {
+//   const generateRestaurant = () => {
     
-//     //   if (err) {
-//     //       console.log(err);
-//     //     res.send(err);
-//     //   } else {
-//     //       console.log("data received",result);
-//     //     res.send(result);
-//     //   }
-//     });
-//   })
-// }
+//   };
+
+//   const generateReservation = () => {
+    
+//   };
+
+//   const generateHour = () => {
+    
+//   };
+
+//   generateRestaurant();
+//   generateReservation();
+//   generateHour();
+// }());
