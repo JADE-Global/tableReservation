@@ -1,21 +1,13 @@
-// const faker = require('faker');
-// const moment = require('moment');
-// const db = require('./index.js');
+const Models= require('./model.js');
 
-// (function () {
-//   const generateRestaurant = () => {
-    
-//   };
-
-//   const generateReservation = () => {
-    
-//   };
-
-//   const generateHour = () => {
-    
-//   };
-
-//   generateRestaurant();
-//   generateReservation();
-//   generateHour();
-// }());
+module.exports= {
+    seedRestaurant : (req,res) =>{
+    Models.seedRestaurant((err,data) => {
+      if(err) {
+        res.status(400).send(err);
+      } else {
+        res.send(data);
+      }
+    });
+  }
+}

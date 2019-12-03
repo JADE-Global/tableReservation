@@ -17,10 +17,8 @@ connection.connect();
 module.exports = {
     seedRestaurant: () => {
         var restaurants = [];
-        //console.log(restaurants.length - 1);
         for (var i = 0; i < 100; i++) {
             var resName = restaurantsName[i];
-            console.log(restaurantsName[i]);
             var minCap = (1 + Math.floor(Math.random() * 10));
             var maxCap = (Math.floor(Math.random() * 40 + 10));
             let openHr = 6 + Math.floor(Math.random() * 5);
@@ -32,7 +30,7 @@ module.exports = {
             } else {
                 openHr += ':00';
             }
-            console.log(openHr);
+           
             let closeHr = 21 + Math.floor(Math.random() * 5);
             if (closeHr > 24) {
                 closeHr -= 24;
@@ -42,7 +40,6 @@ module.exports = {
             } else {
                 closeHr += ':00';
             }
-            //console.log(closeHr);
 
             restaurants.push({
                 id: i,
@@ -52,32 +49,25 @@ module.exports = {
                 openHr: openHr,
                 closingHr: closeHr
             });
-           // console.log(resName);
+    
             const query = `INSERT INTO restaurant(name, minCapacity, maxCapacity, openHr, closingHr) VALUES('${resName}',${minCap},${maxCap},'${openHr}','${closeHr}')`;
-            // console.log("***********************************");
-            // console.log("***********************************");
-            //console.log(query);
+        
             connection.query(query, (err) => {
                 if (err) {
                     console.log(err);
                 }
                 else {
-                    console.log("seeding succeseed");
+                    console.log("restaurant seeding succeseed");
                 }
             });
-        }
-       // console.log("restaurant data is ", restaurants);
-        // return restaurant;        
+        }      
     }
 }
-
-
 
 const seedReservation = () => {
     var reservation = [];
     for (var i = 0; i < 100; i++) {
         var custName = faker.name.findName();
-        // console.log(customerName);
         var restId = Math.floor(Math.random() * 100);
         var reservationDate = faker.date.future(0.05);
         var randomDate = parseInt(12 + (Math.random() * 10), 10);
@@ -106,18 +96,11 @@ const seedReservation = () => {
             if (err) {
                 console.log(err);
             }else {
-                console.log("seeding done");
+                console.log("reservation seeding done");
             }
         });
-        // console.log(query);
     }
     return reservation;
 
 };
 seedReservation();
-
-
-
-
-
-

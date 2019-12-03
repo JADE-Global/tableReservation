@@ -8,9 +8,9 @@ app.use('/', express.static(path.join(__dirname, '../client/dist/')))
 
 //app.get('/repo', (req, res) => res.send('Hello World from server!'))
 
-app.get('/api/:restaurant_id/reservation', (req, res) => {
-    const id = req.query.id;
-    console.log(id);
+app.get('/api/:restaurantId', (req, res) => {
+    const id = req.params.restaurantId;
+    //console.log("server id",id);
     db.getReservations(id,(err, result) => {
       if (err) {
           console.log(err);
@@ -23,18 +23,19 @@ app.get('/api/:restaurant_id/reservation', (req, res) => {
   });
 app.get('/seeding/restaurant', (req, res) => {
     console.log("seeding api");
-    const id = req.query.id;
-    console.log(id);
-    db.seedRestaurant(id,(err,data)=> {
-        if (err) {
-            console.log(err);
-        res.send(err);
-        } else {
-            console.log("data for restaurant",data);
-        res.send(data);
-        }
-    });
+    seed.seedRestaurant();
+    res.send("success");
+    // seed.seedRestaurant();{
+    //     if (err) {
+    //         console.log(err);
+    //     res.send(err);
+    //     } else {
+    //         console.log("data for restaurant",data);
+    //     res.send(data);
+    //     }
+    // });
 });
+
 
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
