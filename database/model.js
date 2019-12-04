@@ -29,19 +29,19 @@ getReservations: (id,callback) => {
   });
 },
 
-// seedRestaurant: (callback) => {
-//  var query='SELECT * FROM restaurant;';
-//   console.log(query);
-//   connection.query(query, function(err, result) {
-//     if (err) {
-//       callback(err);
-//     } else {
-//       console.log("result is ",result);
-//       callback(null, result);
-//     }
-//   });
+getRestaurant: (callback) => {
+ var query='SELECT name,openHr,closingHr FROM restaurant;';
+  console.log(query);
+  connection.query(query, function(err, result) {
+    if (err) {
+      callback(err);
+    } else {
+      console.log("result is ",result);
+      callback(null, result);
+    }
+  });
 
-// }
+}
 
 };
 

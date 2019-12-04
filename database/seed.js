@@ -15,7 +15,7 @@ const connection = mysql.createConnection({
 connection.connect();
 
 module.exports = {
-    seedRestaurant: () => {
+    getRestaurant: () => {
         var restaurants = [];
         for (var i = 0; i < 100; i++) {
             var resName = restaurantsName[i];

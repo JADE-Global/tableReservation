@@ -4,6 +4,8 @@ const port = 1113
 const path=require('path');
 const db= require('../database/model.js');
 const seed= require('../database/seed.js');
+const Controller = require('./controller.js');
+
 app.use('/', express.static(path.join(__dirname, '../client/dist/')))
 
 //app.get('/repo', (req, res) => res.send('Hello World from server!'))
@@ -23,17 +25,7 @@ app.get('/api/:restaurantId', (req, res) => {
   });
 app.get('/seeding/restaurant', (req, res) => {
     console.log("seeding api");
-    seed.seedRestaurant();
-    res.send("success");
-    // seed.seedRestaurant();{
-    //     if (err) {
-    //         console.log(err);
-    //     res.send(err);
-    //     } else {
-    //         console.log("data for restaurant",data);
-    //     res.send(data);
-    //     }
-    // });
+    Controller.getRestaurant(req,res);
 });
 
 

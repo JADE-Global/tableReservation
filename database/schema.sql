@@ -21,6 +21,9 @@ CREATE TABLE restaurant
   PRIMARY KEY (id)
 );
 
+ALTER TABLE restaurant ADD openHr TIME;
+ALTER TABLE restaurant ADD closingHr TIME;
+
 CREATE TABLE reservation
 (
   id INT NOT NULL AUTO_INCREMENT,
@@ -29,5 +32,4 @@ CREATE TABLE reservation
   restaurantId INT(11) NOT NULL,
   PRIMARY KEY (id)
 );
-ALTER TABLE restaurant ADD openHr TIME;
-ALTER TABLE restaurant ADD closingHr TIME;
+
