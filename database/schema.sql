@@ -3,12 +3,7 @@
  CREATE DATABASE yelp;
  use yelp;
   
-  CREATE TABLE restaurant (
-      id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-      name VARCHAR(100) NOT NULL,
-      minCapacity INT NOT NULL,
-      maxCapacity INT NOT NULL
-  );
+  
   CREATE TABLE customer (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     firstName VARCHAR(20) NOT NULL,
@@ -17,12 +12,22 @@
     contactNo INT(10) NOT NULL,
     note VARCHAR(100) 
 );
+CREATE TABLE restaurant
+(
+  id INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(100) NOT NULL,
+  minCapacity INT NOT NULL,
+  maxCapacity INT NOT NULL,
+  PRIMARY KEY (id)
+);
 
-  CREATE TABLE reservation (
-      id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-      date DATETIME NOT NULL,
-      restaurantId INT, 
-      customerName VARCHAR(30),
-          foreign key (restaurantId) references restaurant(id),
-  );
-
+CREATE TABLE reservation
+(
+  id INT NOT NULL AUTO_INCREMENT,
+  customerName VARCHAR(50) NOT NULL,
+  date_time DATETIME NOT NULL,
+  restaurantId INT(11) NOT NULL,
+  PRIMARY KEY (id)
+);
+ALTER TABLE restaurant ADD openHr TIME;
+ALTER TABLE restaurant ADD closingHr TIME;
