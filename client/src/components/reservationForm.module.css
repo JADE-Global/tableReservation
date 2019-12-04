@@ -1,0 +1,59 @@
+
+
+.time  {
+    display: block;
+    float: left;    
+    width: 143px;    
+    height: 20px; 
+    margin-top: 2px;
+
+}
+.people  {
+    display: block;
+    float: left;    
+    width: 100px;    
+    height: 20px; 
+    margin-top: 2px;
+
+}
+.compo_layout {
+    margin-top: 10px;
+}
+
+.date_layout1{
+    display: inherit;
+    display: inline-block;
+
+}
+.date_layout2{
+    margin:0px;
+    position: relative;
+    box-shadow: none;
+    border-color: #e6e6e6;
+}
+.date_layout3 {
+    position: relative;
+    background-color: white;
+    width: 293px;
+}
+.date_layout4 {
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    pointer-events: none;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+}
+.input_layout {
+    box-sizing: border-box;
+    line-height: inherit;
+    padding-right: 24px;
+    margin: 0;
+    box-shadow: none;
+    cursor: default;
+    padding-left: 30px;
+    height: 30px;
+    width: 278px;
+}
+

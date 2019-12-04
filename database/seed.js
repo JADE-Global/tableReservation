@@ -22,6 +22,7 @@ module.exports = {
             var minCap = (1 + Math.floor(Math.random() * 10));
             var maxCap = (Math.floor(Math.random() * 40 + 10));
             let openHr = 6 + Math.floor(Math.random() * 5);
+        
             if (openHr > 10) {
                 openHr = `0${openHr}`;
             }
@@ -42,7 +43,7 @@ module.exports = {
             }
 
             restaurants.push({
-                id: i,
+                res_Id: i,
                 name: resName,
                 minCapacity: minCap,
                 maxCapacity: maxCap,
