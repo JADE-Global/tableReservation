@@ -58,7 +58,7 @@ module.exports = {
                     console.log(err);
                 }
                 else {
-                    console.log("restaurant seeding succeseed");
+                    console.log(query);
                 }
             });
         }      
@@ -97,7 +97,7 @@ const seedReservation = () => {
             if (err) {
                 console.log(err);
             }else {
-                console.log("reservation seeding done");
+                // console.log("reservation seeding done");
             }
         });
     }

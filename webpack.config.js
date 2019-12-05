@@ -10,7 +10,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.?jsx$/,
+        test: /\.m?js$|\.m?jsx$/,
         include: SRC_DIR,
         use: {
           loader: 'babel-loader',
@@ -42,7 +42,15 @@ module.exports = {
             }
           }
         ]
-      }
+      },
+      {
+        test: /\.css$/,
+        use: [
+            'style-loader',
+            'css-loader'
+        ],
+        exclude: /\.module\.css$/
+    }
     ]
   }
 }

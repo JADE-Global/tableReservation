@@ -33,3 +33,16 @@ CREATE TABLE reservation
   PRIMARY KEY (id)
 );
 
+time-windows
+- time-window_id
+- fk_table_id
+- starttime
+- endtime
+CREATE TABLE time_slot
+(
+  id INT NOT NULL AUTO_INCREMENT,
+ 
+ start_time  DATETIME NOT NULL,
+  restaurantId INT(11) NOT NULL,
+  PRIMARY KEY (id)
+);

@@ -12,11 +12,11 @@ connection.connect();
 
 module.exports ={
 getReservations: (id,callback) => {
-   var query = 'SELECT * FROM restaurant;';
+  //  var query = 'SELECT * FROM restaurant;';
   console.log(id);
-  // var query=`SELECT restaurant.name, reservation.customerName,reservation.date_time FROM reservation 
-  //   INNER JOIN restaurant ON reservation.restaurantId = restaurant.id
-  //   WHERE restaurantId = ${id}`;
+  var query=`SELECT restaurant.name, reservation.customerName,reservation.date_time FROM reservation 
+    INNER JOIN restaurant ON reservation.restaurantId = restaurant.id
+    WHERE restaurantId = ${id}`;
 
      console.log(query);
   connection.query(query, function(err, result) {

@@ -25,6 +25,7 @@ app.get('/api/:restaurantId', (req, res) => {
   });
 app.get('/seeding/restaurant', (req, res) => {
     console.log("seeding api");
+    seed.getRestaurant();
     Controller.getRestaurant(req,res);
 });
 
