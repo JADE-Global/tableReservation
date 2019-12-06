@@ -15,7 +15,7 @@ const connection = mysql.createConnection({
 connection.connect();
 
 module.exports = {
-    seedRestaurant: () => {
+    getRestaurant: () => {
         var restaurants = [];
         for (var i = 0; i < 100; i++) {
             var resName = restaurantsName[i];
@@ -58,7 +58,7 @@ module.exports = {
                     console.log(err);
                 }
                 else {
-                    console.log("restaurant seeding succeseed");
+                    console.log(query);
                 }
             });
         }      
@@ -97,7 +97,7 @@ const seedReservation = () => {
             if (err) {
                 console.log(err);
             }else {
-                console.log("reservation seeding done");
+                // console.log("reservation seeding done");
             }
         });
     }

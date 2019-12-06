@@ -1,0 +1,49 @@
+.fa-user { 
+    position: absolute; 
+    top: 1px; 
+    left: 5px; 
+    display:inline; 
+}
+
+.guest_layout1 {
+    flex: 1;
+    min-width: 0;
+    min-height: 0;
+    display: block;
+    box-sizing: border-box;
+   width:151px;
+   height:20px;
+    margin-left: 3px;
+    margin-right: 3px;
+    border-collapse: collapse;
+    border-spacing: 0 0;
+    margin-bottom: 2px;
+
+}
+.guest_layout2 {
+    border-color: #e6e6e6;
+    position: relative;
+}
+.guest_layout3 {
+    border-color: #e6e6e6;
+    margin: 0;
+    position: relative;
+    box-shadow: none;
+}
+.guest_layout4 {
+    width:18px;
+    height:10px;
+    top:4px;
+    position: absolute;
+    pointer-events: none;
+    fill: currentColor;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+}
+.option_layout {
+    height: 20px;
+    width:150px;
+    padding-right: 700px;
+    text-indent: 13px;
+}

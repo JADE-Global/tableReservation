@@ -1,0 +1,16 @@
+.restInfo {
+    background-color: #fff;
+    border-color: #e6e6e6;
+    border-left: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    border-right: 1px solid #e6e6e6;
+    border-top: 1px solid #e6e6e6;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.restName {
+    margin-top:10px;
+    margin-bottom: 10px;
+    margin-left:10px;
+}

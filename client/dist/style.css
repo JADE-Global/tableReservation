@@ -197,3 +197,36 @@ td {
 .label_month {
     cursor: pointer;
 }
+
+/* option css */
+.select-box {
+    width:30px;
+    height:30px;
+    margin:0;
+    padding:0px;
+    display:inline-block;
+    background: #aaa;
+}
+
+.select-box--arrow-down {
+    position: absolute;
+    top:196px;
+    left: 13px;
+    width:0;
+    height:0;
+    border-left: 8px solid transparent;
+    border-right:8px solid transparent;
+    border-top: 10px solid black;
+
+}
+.select-box--arrow-up {
+    position: absolute;
+    top:195px;
+    left: 12px;
+    width:0;
+    height:0;
+    border-left: 8px solid transparent;
+    border-right:8px solid transparent;
+    border-bottom : 10px solid black;
+    
+}
